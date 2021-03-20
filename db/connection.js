@@ -32,9 +32,9 @@ mongoose.connect(MONGODB_URL, config)
 
 mongoose.connection
     // Event for Conenction Open
-    .on("open", () => log.green("STATUS, Connected to Mongo"))
+    .on("open", () => log.green("STATUS", "Connected to Mongo"))
     // Event for Connection Close
-    .on("close", () => log.red("STATUS, Disconnected from Mongo"))
+    .on("close", () => log.red("STATUS", "Disconnected from Mongo"))
     // Event for Connection Errors
     .on("error", error => log.red("ERROR", error))
 
